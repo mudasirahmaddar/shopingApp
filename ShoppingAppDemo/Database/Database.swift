@@ -7,26 +7,36 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 final class DatabaseManager{
   static var shared = DatabaseManager()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-   
-  func SaveFavData(item:MainItem){
-      let entity = FavItems(context: context)
+    
+    private init(){}
+  
+    
+    func Save(item:MainItem,type:String){
+        
+        if type == "cart"{
+            let entity = CartItems(context: context)
+            entity.name = item.name
+            entity.id = Int64(item.id)
+            entity.image = item.icon
+            entity.price = item.price
+              doCatchHander()
 
-      entity.name = item.name
-      entity.id = Int64(item.id)
-      entity.image = item.icon
-      entity.price = item.price
+        }else{
+            let entity = FavItems(context: context)
+            entity.name = item.name
+            entity.id = Int64(item.id)
+            entity.image = item.icon
+            entity.price = item.price
 
-        do{
-            try context.save()
-        }catch{
-            debugPrint(error)
+             doCatchHander()
         }
-      
-    }
+        
+      }
     
    
     func getFavItems()-> [FavItems]{
@@ -42,34 +52,26 @@ final class DatabaseManager{
         
     }
     
-    func deleteFav(FavItem:FavItems) {
-      
-        do{
-            context.delete(FavItem)
-            try context.save()
+    func delete<T>(item:T){
            
-        }catch{
-            print("no data found")
-        }
-        
+            do{
+                context.delete(item as! NSManagedObject)
+                try context.save()
+                
+            }catch{
+                print("error while deleting")
+            }
         
     }
-    
-    func SaveToCart(item:MainItem){
-        let entity = CartItems(context: context)
 
-        entity.name = item.name
-        entity.id = Int64(item.id)
-        entity.image = item.icon
-        entity.price = item.price
-
-          do{
-              try context.save()
-          }catch{
-              debugPrint(error)
-          }
-        
-      }
+    func doCatchHander(){
+        do{
+            try context.save()
+        }catch{
+            debugPrint(error)
+        }
+      
+    }
     
     func getCartItems()-> [CartItems]{
         var items :[CartItems] = []
@@ -83,19 +85,5 @@ final class DatabaseManager{
         return items
         
     }
-    
-    func deleteCartItem(cartItem:CartItems) {
-      
-        do{
-            context.delete(cartItem)
-            try context.save()
-           
-        }catch{
-            print("no data found")
-        }
-        
-      
-        
-        
-    }
+ 
 }

@@ -14,43 +14,28 @@
             filePath = "ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - aff0fb320cc88fb"
+                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - 615f60295b760f9e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "closure #1 (ShoppingAppDemo.CartItems) -&gt; () in closure #3 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "ShoppingAppDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "960">
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "772">
                </Location>
                <Location
-                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - aff0fb320cc88fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "ShoppingAppDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "940">
-               </Location>
-               <Location
-                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - 51ed49d4a9f6b65f"
+                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - 51ed49d4a9f6a9a3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -60,9 +45,24 @@
                   urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "928">
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "1008">
+               </Location>
+               <Location
+                  uuid = "79EF2E16-18DD-4A0C-B696-321A9416DC27 - 51ed49d4a9f6ab37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "ShoppingAppDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "2072">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -182,17 +182,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54D90BA6-09DC-4111-8886-3DFBC560F534"
+            uuid = "04EC78A6-6D1B-4181-9279-AF1C83640C16"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingAppDemo/HomeModule/View/ListCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "addBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A13AC64-1BCF-4E30-B2D2-74E102565DB5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A13AC64-1BCF-4E30-B2D2-74E102565DB5 - 965a1a5c243edf44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ShoppingAppDemo.FavItems) -&gt; () in closure #2 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "ShoppingAppDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "9A13AC64-1BCF-4E30-B2D2-74E102565DB5 - 989383ee3298b6a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "ShoppingAppDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+               <Location
+                  uuid = "9A13AC64-1BCF-4E30-B2D2-74E102565DB5 - 989383ee3298b6c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in ShoppingAppDemo.ListTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "ShoppingAppDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mudasir/Documents/DemoProjects/ShoppingAppDemo/ShoppingAppDemo/HomeModule/View/ListTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

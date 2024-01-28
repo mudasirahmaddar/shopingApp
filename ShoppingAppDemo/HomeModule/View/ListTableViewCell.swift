@@ -13,13 +13,9 @@ import Foundation
 class ListTableViewCell: UITableViewCell {
    
     @IBOutlet weak var collectionviewList: UICollectionView!
-    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
-   
-   
     var  allcategory: Category?
-   
     var AddToCart : (()->())?
     var removeToCart : (()->())?
     
@@ -29,8 +25,6 @@ class ListTableViewCell: UITableViewCell {
         collectionviewList.dataSource = self
         
         collectionviewList.register(UINib(nibName: "ListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ListCollectionViewCell")
-        
-   
        
     }
 
@@ -70,8 +64,7 @@ extension ListTableViewCell: UICollectionViewDataSource,UICollectionViewDelegate
                         }else{
                             print("some thing")
                        }
-                        
-                        debugPrint(imageUrl)
+                       
                     }
         }else{
             print("image url not found")
@@ -95,47 +88,50 @@ extension ListTableViewCell: UICollectionViewDataSource,UICollectionViewDelegate
 
         
         cell.addFavBtnAction = {
-            cell.isselected = !cell.isselected
-            if cell.isselected{
-                cell.imgFav.image = UIImage(systemName: "heart.fill")
-                cell.imgFav.tintColor = .red
-                DatabaseManager.shared.SaveFavData(item: obj!)
-               
-            }else{
-                cell.imgFav.image = UIImage(systemName: "heart")
-                cell.imgFav.tintColor = .black
-                let favItems =  DatabaseManager.shared.getFavItems()
-                   favItems.forEach({ Favitem in
-                    if Favitem.name == obj?.name ?? ""{
-                        DatabaseManager.shared.deleteFav(FavItem: Favitem)
-                    }
-                })
-            }
-        }
-
-        cell.AddCartBtnAction = {
-            cell.isCartSelected = !cell.isCartSelected
-           
-            if cell.isCartSelected{
-                cell.plusBtnImg.image = UIImage(systemName: "minus.rectangle.fill")
-                DatabaseManager.shared.SaveToCart(item: obj!)
-                if  let action = self.AddToCart{
-                  action()
+               cell.isselected = !cell.isselected
+                if cell.isselected{
+                    cell.imgFav.image = UIImage(systemName: "heart.fill")
+                    cell.imgFav.tintColor = .red
+                    DatabaseManager.shared.Save(item: obj!, type: "favourite")
+                    
+                }else{
+                    cell.imgFav.image = UIImage(systemName: "heart")
+                    cell.imgFav.tintColor = .black
+                    let favItems =  DatabaseManager.shared.getFavItems()
+                    favItems.forEach({ Favitem in
+                        if Favitem.name == obj?.name ?? ""{
+                            DatabaseManager.shared.delete(item: Favitem)
+                        }
+                    })
                 }
-            }else{
-                cell.plusBtnImg.image = UIImage(systemName: "plus.rectangle.fill")
-                let cartItems = DatabaseManager.shared.getCartItems()
-                cartItems.forEach({ Cartitem in
-                    if Cartitem.id == obj?.id ?? 0{
-                        DatabaseManager.shared.deleteCartItem(cartItem: Cartitem)
+           
+        }
+        cell.AddCartBtnAction = {
+           
+                cell.isCartSelected = !cell.isCartSelected
+                
+                if cell.isCartSelected{
+                    cell.plusBtnImg.image = UIImage(systemName: "minus.rectangle.fill")
+                    DatabaseManager.shared.Save(item: obj!, type: "cart")
+                    if  let action = self.AddToCart{
+                        action()
                     }
-                })
-              
-                if  let action = self.removeToCart{
-                    action()
-                  }
-               
-            }
+                }else{
+                    cell.plusBtnImg.image = UIImage(systemName: "plus.rectangle.fill")
+                    let cartItems = DatabaseManager.shared.getCartItems()
+                    cartItems.forEach({ Cartitem in
+                        if Cartitem.id == obj?.id ?? 0{
+                            DatabaseManager.shared.delete(item: Cartitem)
+                            cell.isCartSelected = false
+                        }
+                    })
+                    
+                    if  let action = self.removeToCart{
+                        action()
+                    }
+                    
+                }
+           
         }
         return cell
     }
